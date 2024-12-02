@@ -4,18 +4,19 @@ const resetSearch = document.getElementById('reset-place');
 
 
 function searchTravelPlaces(){
-    const input = document.getElementById('search-input');
-    const result = document.getElementById('main-container');
-    fetch('travel_recommendation_api.json',{ method: "GET", mode: 'cors', headers: { 'Content-Type': 'application/json','Access-Control-Allow-Origin': '*'}})
+    const input = document.getElementById('search-input').value;
+    console.log(input);
+    const result = document.getElementById('result-container');
+    fetch('travel_recommendation_api.json')
     .then(response => response.json())
     .then(data => {
-       const condition = data.Travel.find(item => item.name.toLowerCase() === input);
+       const condition = data.Travel.find(item => item.name.toLowerCase() === input.toLowerCase());
        if(condition){
-        const desc = condition.description.join(', ');
-        const options = { timeZone: condition.timeZone, hour12: true, hour: 'numeric', minute: 'numeric', second: 'numeric' };
+        console.log(condition);
+        const options = { timeZone: condition.timezone, hour12: true, hour: 'numeric', minute: 'numeric', second: 'numeric' };
         const timezone = new Date().toLocaleTimeString('en-US', options); 
-        result.innerHTML += `<h2>${condition.name}</h2>`;
-        result.innerHTML += `<img src="${condition.image}"/>`;
+        result.innerHTML = `<h2>${condition.name.toUpperCase()}</h2>`;
+        result.innerHTML += `<img src="${condition.imagesrc}"/>`;
         result.innerHTML += `<div>${condition.description}</h2>`;
         result.innerHTML += `<div>Current Time in ${condition.name} is: ${timezone}</div>`
        } else {
@@ -31,6 +32,8 @@ function searchTravelPlaces(){
 function resetSearchPlace(){
     const input = document.getElementById('search-input');
     input.value = "";
+    const result = document.getElementById('result-container');
+    result.innerHTML = "";
 }
 
 btnSearch.addEventListener('click', searchTravelPlaces);
