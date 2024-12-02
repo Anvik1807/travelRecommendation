@@ -1,1 +1,29 @@
-travel_recommendation_api
+{
+    "Travel": [
+      {
+        "name": "United States",
+        "imagesrc":"us.jpg",
+        "description": "US",
+        "timezone": "America/New_York"
+      },
+      {
+        "name": "United Kingdom",
+        "imagesrc":"uk.jpg",
+        "description": "UK.",
+        "timezone": "Europe/London"
+      },
+      {
+        "name": "India",
+        "imagesrc":"golden-tample.jpg",
+        "description": "India",
+        "timezone": "Asia/Kolkata"
+      },
+      {
+        "name": "Dubai",
+        "imagesrc":"dubai.jpg",
+        "description": "Dubai",
+        "Place": "Asia/Dubai"
+      }
+    ]
+  }
+  
