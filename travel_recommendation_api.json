@@ -2,27 +2,23 @@
     "Travel": [
       {
         "name": "united states",
-        "name": "united states",
         "imagesrc":"us.jpg",
         "description": "US",
         "timezone": "America/New_York"
       },
       {
         "name": "united kingdom",
-        "name": "united kingdom",
         "imagesrc":"uk.jpg",
-        "description": "UK.",
+        "description": "UK",
         "timezone": "Europe/London"
       },
       {
-        "name": "india",
         "name": "india",
         "imagesrc":"golden-tample.jpg",
         "description": "India",
         "timezone": "Asia/Kolkata"
       },
       {
-        "name": "dubai",
         "name": "dubai",
         "imagesrc":"dubai.jpg",
         "description": "Dubai",
