@@ -10,15 +10,17 @@ function searchTravelPlaces(){
     fetch('travel_recommendation_api.json')
     .then(response => response.json())
     .then(data => {
-       const condition = data.Travel.find(item => item.name.toLowerCase() === input.toLowerCase());
+      // const condition = data.Travel.find(item => item.name.toLowerCase() === input.toLowerCase());
+      const condition = data.Travel.find(item => item.name.toLowerCase().includes(input.toLowerCase()));
+      //string.toLowerCase().includes(substring.toLowerCase())
        if(condition){
         console.log(condition);
-        const options = { timeZone: condition.timezone, hour12: true, hour: 'numeric', minute: 'numeric', second: 'numeric' };
-        const timezone = new Date().toLocaleTimeString('en-US', options); 
-        result.innerHTML = `<h2>${condition.name.toUpperCase()}</h2>`;
-        result.innerHTML += `<img src="${condition.imagesrc}"/>`;
-        result.innerHTML += `<div>${condition.description}</h2>`;
-        result.innerHTML += `<div>Current Time in ${condition.name} is: ${timezone}</div>`
+        // const options = { timeZone: condition.timezone, hour12: true, hour: 'numeric', minute: 'numeric', second: 'numeric' };
+        // const timezone = new Date().toLocaleTimeString('en-US', options); 
+        // result.innerHTML = `<h2>${condition.name.toUpperCase()}</h2>`;
+        // result.innerHTML += `<img src="${condition.imagesrc}"/>`;
+        // result.innerHTML += `<div>${condition.description}</h2>`;
+        // result.innerHTML += `<div>Current Time in ${condition.name} is: ${timezone}</div>`
        } else {
         result.innerHTML = `<h2 style="color: red;">Travel Place Not found</h2>`;
        }
