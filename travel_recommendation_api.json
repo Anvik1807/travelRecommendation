@@ -22,13 +22,13 @@
         "places":[
           {
             "name":"baga",
-            "imgsrc":"baga.jpg",
+            "imagesrc":"baga.jpg",
             "description":"baga",
             "place":"Goa"
           },
           {
             "name":"radha sagar",
-            "imgsrc":"radha.jpg",
+            "imagesrc":"radha.jpg",
             "description":"Radha Sagar",
             "place":"Andman"
           }
@@ -39,13 +39,13 @@
         "places":[
           {
             "name":"ram mandir",
-            "imgsrc":"ayodhya.jpg",
+            "imagesrc":"ayodhya.jpg",
             "description":"ram mandir",
             "place":"Ayodhya"
           },
           {
             "name":"krishna mandir",
-            "imgsrc":"mathura.jpg",
+            "imagesrc":"mathura.jpg",
             "description":"krishna mandir",
             "place":"Mathura"
           }
